@@ -1,0 +1,266 @@
+/* October 3rd, 2023
+Camila Lopez-Diaz
+Emerging Tech: AI */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Universal setting */
+html {
+    font-size: 16px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* header  & footer joint styles*/
+header,
+footer {
+    background-color: rgb(60, 47, 24);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.25rem 1rem;
+}
+
+/* website title */
+header h1 {
+    font: bold 2.5rem "Roboto", sans-serif;
+    color: blanchedalmond;
+    margin: 0;
+    line-height: 1;
+    padding-top: 0.25rem;
+}
+
+/* footer */
+footer {
+    font: 1.125rem "Roboto", sans-serif;
+    color: rgb(180, 171, 156);
+}
+
+/* Navigation Bar */
+nav hr,
+div.maincontent hr {
+    clear: both;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    border: 0 solid transparent;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin: 0.5rem;
+}
+
+nav li a {
+    display: block;
+    background-color: rgb(188, 178, 165);
+    color: rgb(48, 40, 21);
+    font: normal 1.5rem "Roboto", sans-serif;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+/* Style for the active page */
+.navbar li #active {
+    background-color: #447596;
+    color: white;
+}
+
+nav li a:hover {
+    color: white;
+}
+
+/* Homepage Image and Text */
+.image-container {
+    background-color: transparent;
+    border: none;
+    margin: 0px;
+    padding: 0.3125rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    height: auto;
+}
+
+.image-container h2 {
+    color: rgb(60, 47, 24);
+    font: bolder 4rem "Roboto", sans-serif;
+    text-align: center;
+    margin-bottom: 0.625rem;
+    letter-spacing: 0.0625rem;
+}
+
+.image-container h3 {
+    color: rgb(187, 6, 6);
+    font: bold italic 2.8rem "Roboto", sans-serif;
+    text-align: center;
+    margin-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+/* Overlay text box */
+div.text-overlay {
+    background-color: rgba(233, 232, 220, 0.88);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Main Content - HOME */
+.maincontent {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    letter-spacing: 0.75px;
+
+    background-color: white;
+    animation-name: change-color;
+    animation-duration: 5s;
+}
+
+@keyframes change-color {
+    from {
+        background-color: white;
+    }
+
+    to {
+        background-color: lightgoldenrodyellow;
+    }
+}
+
+.maincontent,
+#text-pages {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Page Two and Three */
+.maincontent h4,
+#text-pages h1,
+#text-pages h2 {
+    font-size: 1.75rem;
+    margin-top: 0.125rem;
+    margin-bottom: 0.3125rem;
+}
+
+.maincontent h1 {
+    padding-top: 0.25rem;
+}
+
+.maincontent p,
+#text-pages p,
+#text-pages li {
+    font-size: 1.125rem;
+    margin-top: 0.3125rem;
+}
+
+#text-pages h2 {
+    font-style: italic;
+    color: darkgreen;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+caption {
+    margin-bottom: 0.5rem;
+}
+
+th {
+    background-color: #447596;
+    color: white;
+    padding: 0.5rem;
+}
+
+td {
+    padding: 0.5rem;
+    border: 1px solid white;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+/* Media query for largest screens */
+@media screen and (min-width: 1281px) {
+
+    div.text-overlay {
+        width: 50%;
+        max-width: calc(100% - 1rem);
+    }
+
+    .maincontent,
+    #text_pages {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Media query for mid-size screens */
+@media screen and (max-width: 1280px) {
+
+    .image-container h2 {
+        font-size: 4vw;
+    }
+
+    .image-container h3 {
+        font-size: 3vw;
+    }
+
+    div.text-overlay {
+        width: 50%;
+        max-width: calc(100% - 1rem);
+    }
+
+    .maincontent,
+    #text-pages {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Media query for smallest screens */
+@media screen and (max-width: 480px) {
+
+    .image-container h2,
+    .image-container h3,
+    div.text_overlay {
+        font-size: 100%;
+    }
+
+    div.text-overlay {
+        width: 50%;
+        max-width: calc(100% - 1rem);
+    }
+
+    .maincontent,
+    #text-pages {
+        padding: 0 0.5rem;
+    }
+}
